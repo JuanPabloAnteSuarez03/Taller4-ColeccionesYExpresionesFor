@@ -12,11 +12,17 @@ def matchByElement(i: Int, n: Int): List[Match] = {
 }
 
 
-
-/*
-def matchsByElements(n:Int): List[List[Match]] = {
+def matchsByElements(n: Int): List[List[Match]] = {
+  var allMatches = List[List[Match]]()
+  for (i <- 1 to n) {
+    val matches = matchByElement(i, n)
+    allMatches = allMatches :+ matches
+  }
+  allMatches
 }
 
+
+/*
 def possibleMatchings(n:Int): List[List[Match]] = {
 }
 
